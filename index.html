@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miso Collection - Logo Design Services</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mint: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+        .wave-bg {
+            background: linear-gradient(135deg, #86efac 0%, #4ade80 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .wave-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,500Q250,400,500,500T1000,500L1000,1000H0Z' fill='%23ffffff10'/%3E%3C/svg%3E") repeat-x;
+            animation: wave 20s linear infinite;
+            opacity: 0.3;
+        }
+        @keyframes wave {
+            0% { background-position-x: 0; }
+            100% { background-position-x: 1000px; }
+        }
+        .card {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .card:hover .icon-container {
+            background-color: #4ade80;
+            color: white;
+            transform: scale(1.1);
+        }
+        .icon-container {
+            transition: all 0.3s ease;
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-mint-50">
+    <!-- Header -->
+    <header class="relative overflow-hidden wave-bg min-h-[80vh] flex flex-col">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex items-center">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white flex items-center justify-center shadow-lg floating">
+                    <span class="text-2xl sm:text-3xl font-bold text-mint-500">M</span>
+                </div>
+                <h1 class="ml-4 text-2xl sm:text-3xl font-bold text-white drop-shadow-md">Miso Collection</h1>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex items-center">
+            <div class="w-full text-center">
+                <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+                    MISO COLLECTION
+                </h2>
+                <p class="text-xl sm:text-2xl md:text-3xl text-white mb-12 cursive px-4 drop-shadow-md">
+                    Kami melayani pembuatan logo untuk sekolah dan umum
+                </p>
+                <a href="#services" class="inline-block bg-white text-mint-500 px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                    Jelajahi Layanan Kami
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f0fdf4" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-24 bg-mint-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-16">
+                Bordir Kelengkapan Sekolah
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Bendera -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-flag text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Bendera</h4>
+                    <p class="text-gray-600 text-center">Custom bendera sekolah dengan kualitas terbaik</p>
+                </div>
+
+                <!-- Safety -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Safety</h4>
+                    <p class="text-gray-600 text-center">Perlengkapan safety sekolah</p>
+                </div>
+
+                <!-- Lokasi Sekolah -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-map-marker-alt text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Lokasi Sekolah</h4>
+                    <p class="text-gray-600 text-center">Logo lokasi sekolah custom</p>
+                </div>
+
+                <!-- Lokasi Daerah -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-map text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Lokasi Daerah</h4>
+                    <p class="text-gray-600 text-center">Logo lokasi daerah custom</p>
+                </div>
+
+                <!-- Osis -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-users text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Osis</h4>
+                    <p class="text-gray-600 text-center">Logo organisasi siswa intra sekolah</p>
+                </div>
+
+                <!-- Set Pramuka -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-campground text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Set Pramuka</h4>
+                    <p class="text-gray-600 text-center">Kelengkapan logo pramuka</p>
+                </div>
+
+                <!-- Logo kosongan -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="far fa-circle text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Logo kosongan</h4>
+                    <p class="text-gray-600 text-center">Template logo dasar</p>
+                </div>
+
+                <!-- Logo isi -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-fill-drip text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Logo isi</h4>
+                    <p class="text-gray-600 text-center">Logo dengan desain lengkap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16 sm:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-16">
+                SAMPEL PRODUK KAMI
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sample Product 1 -->
+                <div class="card bg-mint-50 rounded-2xl overflow-hidden">
+                    <div class="bg-white p-6">
+                        <div class="aspect-square w-full bg-gray-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-school text-5xl text-mint-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-center">NAMA SEKOLAH</h4>
+                    </div>
+                </div>
+
+                <!-- Sample Product 2 -->
+                <div class="card bg-mint-50 rounded-2xl overflow-hidden">
+                    <div class="bg-white p-6">
+                        <div class="aspect-square w-full bg-gray-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-5xl text-mint-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-center">LOGO SEKOLAH</h4>
+                    </div>
+                </div>
+
+                <!-- Sample Product 3 -->
+                <div class="card bg-mint-50 rounded-2xl overflow-hidden">
+                    <div class="bg-white p-6">
+                        <div class="aspect-square w-full bg-gray-100 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-users text-5xl text-mint-400"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-center">LOGO KELAS</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-16 sm:py-24 bg-mint-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-16">
+                Bordir Baju
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tshirt text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Bagian Depan Logo</h4>
+                    <p class="text-gray-600 text-center">Custom logo untuk bagian depan baju</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-user-tag text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Saku / Nama di dada</h4>
+                    <p class="text-gray-600 text-center">Bordir nama atau logo pada saku</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card bg-white rounded-2xl p-6 sm:p-8">
+                    <div class="icon-container w-16 h-16 bg-mint-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-vest text-2xl text-mint-500"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-center">Bagian depan dan belakang</h4>
+                    <p class="text-gray-600 text-center">Custom bordir untuk bagian depan dan belakang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mint-500 text-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h4 class="text-2xl sm:text-3xl font-bold mb-6">Miso Collection</h4>
+                <p class="mb-8 text-mint-50 text-lg">Spesialis Bordir Logo dan Kelengkapan Sekolah</p>
+                <div class="flex justify-center space-x-8">
+                    <a href="#" class="hover:text-mint-200 transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-mint-200 transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-mint-200 transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="far fa-envelope text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for card animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all cards
+        document.querySelectorAll('.card').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 100}ms`;
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
